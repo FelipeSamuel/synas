@@ -1,0 +1,6 @@
+node_modules
+build/*
+build/asset-manifest.json
+build/index.html
+build/service-worker.js
+.firebase
