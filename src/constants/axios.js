@@ -5,13 +5,12 @@ import {
   API_URL,
   COMPATIBILITY_TOKEN,
   USER_TOKEN_STORAGE_NAME,
-
 } from './variables';
 
 export const axiosLPCreate = async () => {
   const axiosClient = axios.create({
     baseURL: API_URL,
-   // baseURL: 'http://localhost:8000/api',
+    //baseURL: 'http://localhost:8000/api',
   });
 
   axiosClient.defaults.headers.common[
