@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 import { palette } from '../../theme';
 
+export const CallToActionText = styled.h2`
+  color: #af287e;
+`;
+
 export const FooterContainer = styled.div`
   height: 269px;
   display: flex;
@@ -22,11 +26,13 @@ export const LeftColumn = styled.div`
   /* font-weight: 300; */
   text-align: left;
   line-height: 2;
+  img {
+    width: 60%;
+  }
   /* @media screen and (max-width: 1024px) {
     text-align: center;
     width: 100%;
   } */
-
   @media screen and (max-width: 1024px) {
     display: none;
   }

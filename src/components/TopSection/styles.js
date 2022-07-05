@@ -47,7 +47,7 @@ export const TopWrapper = styled.div`
     flex-flow: wrap;
     /* max-height: 100vh; */
     height: 100%;
-    margin: 150px auto;
+    margin: 25px auto;
     /* z-index: 0; */
   }
 `;

@@ -72,6 +72,7 @@ export default function Header(props) {
               </HashLink>
             )}
           </MenuItem>
+          {/*
           <MenuItem>
             {user ? (
               <HashLink smooth to="/#perfil">
@@ -96,6 +97,7 @@ export default function Header(props) {
               </HashLink>
             )}
           </MenuItem>
+          
           <MenuItem>
             {user ? (
               <Button bordered width="14vw" onClick={props.clickExit}>
@@ -107,6 +109,7 @@ export default function Header(props) {
               </Button>
             )}
           </MenuItem>
+          */}
         </MenuList>
         {/* <MenuListResponsive menuMobile={menuMobile}>
           <MenuItem>

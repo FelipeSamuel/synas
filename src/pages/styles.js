@@ -57,6 +57,7 @@ export const WrapperResponsive = styled.div`
     align-items: center;
     /* margin-top: 20px; */
     padding: 30px 0;
+    margin-top: 100px;
   }
 `;
 export const AnimatedTopDiv = styled(animated.div)`
@@ -93,7 +94,6 @@ export const Image = styled.div`
 
   img {
     display: block;
-    height: auto;
     width: 100%;
   }
 
@@ -119,7 +119,7 @@ export const CallToActionText = styled.h2`
   font-size: 1.7em;
   text-align: left;
   font-weight: normal;
-  margin-bottom: 50px;
+  margin-bottom: 15px;
   span {
     font-weight: bold;
   }
@@ -129,6 +129,35 @@ export const CallToActionText = styled.h2`
     margin-bottom: 20px;
   }
 `;
+
+export const CallToActionTitle = styled.h3`
+  margin-top: 0;
+  margin-bottom: 5px;
+`;
+
+export const DownloadLinksWrapper = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 15px;
+  width: 100%;
+`;
+
+export const AppleBadge = styled.a`
+  cursor: pointer;
+  width: 42%;
+  img {
+    width: 100%;
+  }
+`;
+
+export const GoogleBadge = styled.a`
+  cursor: pointer;
+  width: 45%;
+  img {
+    width: 100%
+  }
+`;
+
 export const FBButtonContainer = styled.div`
   display: flex;
   width: 55%;

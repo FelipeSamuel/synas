@@ -14,6 +14,9 @@ import appImg3 from '../../assets/AppImg3.png';
 import appImg4 from '../../assets/AppImg4.png';
 import homeCircle from '../../assets/HomeCircle.png';
 
+import AppStoreBadge from '../../assets/app-store-badge.svg';
+import PlayStoreBadge from '../../assets/google-play-badge.png';
+
 //STYLE
 import {
   Container,
@@ -58,9 +61,23 @@ export default function BodyHome(props) {
           <img src={appImg1} alt="Imagem" />
         </MiddleImageWrapper>
         <MiddleTextWrapper>
-          O SYNAS tem a proposta de melhorar suas relações e, para isso,
-          resolvemos apresentar os graus de compatibilidade entre as pessoas,
-          sob uma análise astrológica.
+          Baixe o App e faça seu cadastro para conhecer pessoas.
+          No cadastro é importante colocar corretamente seus dados,
+          principalmente o horário de nascimento,
+          para que o app possa calcular sua compatibilidade corretamente.
+        </MiddleTextWrapper>
+      </AnimatedMiddleDiv>
+    ),
+    ({ style }) => (
+      <AnimatedMiddleDiv style={{ ...style }}>
+        <MiddleImageWrapper>
+          <img src={appImg4} alt="Imagem" />
+        </MiddleImageWrapper>
+        <MiddleTextWrapper>
+          Aqui você tem diversas ferramentas de pesquisa, 
+          pode escolher além da distância e idade,
+          os signos que quer e o grau de compatibilidade sugerida.
+
         </MiddleTextWrapper>
       </AnimatedMiddleDiv>
     ),
@@ -70,9 +87,10 @@ export default function BodyHome(props) {
           <img src={appImg2} alt="Imagem" />
         </MiddleImageWrapper>
         <MiddleTextWrapper>
-          Nossa ideia é te ajudar a encontrar pessoas que são compatíveis com
-          você. Como? Fazendo uma prévia e rápida leitura digital e cruzamento
-          dos dados do seu mapa astral com outras pessoas. Não é incrível?
+          Arraste para a direita para para dar like em um perfil
+          e com a ajuda dos astros comece a conversar e a conhecer
+          pessoas compatíveis com você.
+
         </MiddleTextWrapper>
       </AnimatedMiddleDiv>
     ),
@@ -84,20 +102,8 @@ export default function BodyHome(props) {
         <MiddleTextWrapper>
           A compatibilidade feita pelo SYNAS foi elaborada com embasamento
           astrológico profissional, calculando a posição dos planetas, a relação
-          entre os signos e outros critérios necessários para ser feita a
+          entre os signos e outros critérios necessários para ser feita a 
           SINASTRIA ASTROLÓGICA entre as pessoas.
-        </MiddleTextWrapper>
-      </AnimatedMiddleDiv>
-    ),
-    ({ style }) => (
-      <AnimatedMiddleDiv style={{ ...style }}>
-        <MiddleImageWrapper>
-          <img src={appImg4} alt="Imagem" />
-        </MiddleImageWrapper>
-        <MiddleTextWrapper>
-          Apesar da SINASTRIA considerar vários planetas do seu mapa astral,
-          criamos uma ferramenta para filtrar os signos que você gostaria de
-          conhecer. Facilitamos bastante a sua vida, não é mesmo?'
         </MiddleTextWrapper>
       </AnimatedMiddleDiv>
     ),
@@ -122,7 +128,7 @@ export default function BodyHome(props) {
             shadow="2px 2px 1px #00000033"
             onClick={() => handleChangeMiddleSlide(0)}
           >
-            O Synas
+            Faça seu cadastro
           </Button>
           <Button
             synas={activeMiddleSlide === 1}
@@ -132,7 +138,7 @@ export default function BodyHome(props) {
             shadow="2px 2px 1px #00000033"
             onClick={() => handleChangeMiddleSlide(1)}
           >
-            Encontre pessoas
+            Escolha seus Filtros
           </Button>
           <Button
             synas={activeMiddleSlide === 2}
@@ -142,7 +148,7 @@ export default function BodyHome(props) {
             shadow="2px 2px 1px #00000033"
             onClick={() => handleChangeMiddleSlide(2)}
           >
-            Informações astrológicas
+            Arraste para os lados…
           </Button>
           <Button
             synas={activeMiddleSlide === 3}
@@ -152,9 +158,10 @@ export default function BodyHome(props) {
             shadow="2px 2px 1px #00000033"
             onClick={() => handleChangeMiddleSlide(3)}
           >
-            Filtro de signos
+            Como funciona a compatibilidade?
           </Button>
-          <Anchor smooth to="#top" style={{ width: '100%' }}>
+          {
+          /*<Anchor smooth to="#top" style={{ width: '100%' }}>
             <Button
               onClick={props.compatibilityClick}
               shadow="2px 2px 1px #00000033"
@@ -163,6 +170,7 @@ export default function BodyHome(props) {
               Fazer compatibilidade
             </Button>
           </Anchor>
+          */}
         </MiddleButtonsWrapper>
         <MiddleWrapperResponsive>
           <BottomTitle>
@@ -183,12 +191,12 @@ export default function BodyHome(props) {
             forma como o casal demonstrará o amor, carinho e afeto um com o
             outro e como o relacionamento será conduzido.
           </BottomText>
+          <h2 style={{color: '#af287e'}}>
+            Conheça mais pessoas
+          </h2>
           <ButtonResponsive>
-            <Anchor responsive smooth to="#top" style={{ width: '100%' }}>
-              <Button onClick={props.compatibilityClick} bold>
-                Fazer compatibilidade
-              </Button>
-            </Anchor>
+            <a href='https://apps.apple.com/br/app/synas/id1619850695'><img src={AppStoreBadge} alt="apple store" /></a>
+            <a href='https://play.google.com/store/apps/details?id=br.com.synas.synas'><img src={PlayStoreBadge} alt="play store" /></a>
           </ButtonResponsive>
           <MiddleButtonsWrapperResponsive id="novo">
             <MiddleButtonsTitle>A evolução do Match</MiddleButtonsTitle>

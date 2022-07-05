@@ -33,6 +33,8 @@ import BodyPairs from './BodyPairs';
 //ASSETS
 import homeImage from '../assets/image.png';
 import network from '../assets/network.png';
+import AppStoreBadge from '../assets/app-store-badge.svg';
+import PlayStoreBadge from '../assets/google-play-badge.png';
 
 //STYLE
 import {
@@ -50,6 +52,10 @@ import {
   BodySlideContainer,
   Wrapper,
   WrapperResponsive,
+  CallToActionTitle,
+  DownloadLinksWrapper,
+  AppleBadge,
+  GoogleBadge,
 } from './styles';
 
 import { getPairs } from '../services';
@@ -112,14 +118,20 @@ export default function Home(props) {
           <Wrapper>
             <CallToActionWrapper>
               <CallToActionText>
-                Nos ajude a começar e experimente nossa ferramenta de{' '}
-                <span>
-                  análise da compatibilidade astrológica gratuitamente :){' '}
-                </span>
+                <CallToActionTitle>
+                  Encontre seu par ideal com a ajuda dos astros
+                </CallToActionTitle>
+                  Baixe o Synas e encontre seu parceiro com base na afinidade astrológica
               </CallToActionText>
+              {/* 
               <Button onClick={() => handleChangeTopSlide(1)} fontSize="16px">
-                QUERO TESTAR AGORA
+                CRIE SUA CONTA
               </Button>
+              */}
+              <DownloadLinksWrapper>
+                <AppleBadge href='https://apps.apple.com/br/app/synas/id1619850695'><img src={AppStoreBadge} alt="apple store" /></AppleBadge>
+                <GoogleBadge href='https://play.google.com/store/apps/details?id=br.com.synas.synas'><img src={PlayStoreBadge} alt="play store" /></GoogleBadge>
+              </DownloadLinksWrapper>
             </CallToActionWrapper>
             <Image smallDisplay={props.smallDisplay}>
               <img src={homeImage} alt="home" />
@@ -127,7 +139,8 @@ export default function Home(props) {
           </Wrapper>
           <WrapperResponsive>
             <CallToActionText>
-              Faça uma análise completa da <b>compatibilidade astrológica</b>
+              <b>Encontre seu par ideal com a ajuda dos astros.<br/></b>
+              Baixe o Synas e encontre seu parceiro com base na afinidade astrológica
             </CallToActionText>
             <Image smallDisplay={props.smallDisplay}>
               <img src={network} alt="network.png" />
@@ -142,6 +155,7 @@ export default function Home(props) {
                 <div />
               </SeparationLine>
             </FBButtonContainer> */}
+            {/*
             <TopFormLogin
               history={props.history}
               handleForgotPassword={() => handleChangeTopSlide(3)}
@@ -164,6 +178,11 @@ export default function Home(props) {
                 NÃO TENHO CADASTRO
               </SignupButton>
             </SignupButtonContainer>
+            */}
+            <DownloadLinksWrapper>
+              <AppleBadge href='https://apps.apple.com/br/app/synas/id1619850695'><img src={AppStoreBadge} alt="apple store" /></AppleBadge>
+              <GoogleBadge href='https://play.google.com/store/apps/details?id=br.com.synas.synas'><img src={PlayStoreBadge} alt="play store" /></GoogleBadge>
+            </DownloadLinksWrapper>
           </WrapperResponsive>
         </AnimatedTopDiv>
       ),

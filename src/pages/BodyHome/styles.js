@@ -138,6 +138,9 @@ export const ButtonResponsive = styled.div`
     display: block;
     margin: 3% 0;
     width: 100%;
+    img {
+      width: 60%;
+    }
     /* margin-bottom: 50px; */
   }
 `;
@@ -157,6 +160,8 @@ export const BottomContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  margin-top: 100px;
+  
   /* padding: 50px 0 0 7.5%; */
   /* flex-wrap: wrap; */
   /* @media screen and (max-width: 1024px) {
